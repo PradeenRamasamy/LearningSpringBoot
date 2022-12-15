@@ -17,7 +17,7 @@ import com.tika.springbootfileUpload.service.FileUploadService;
 public class FileUploadController {
 	@Autowired
 	private FileUploadService fileUploadService;
-	@RequestMapping(path = "/requestparam/fileUpload", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+	@RequestMapping(path = "/fileUpload", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
 	public ResponseEntity<Object> uploadDetils(@RequestParam String name, @RequestPart MultipartFile document) throws FileUploadException {
 		String fileName = document.getName();
 		try {
